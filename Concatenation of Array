@@ -1,0 +1,16 @@
+class Solution {
+public:
+    vector<int> getConcatenation(vector<int> nums) {
+        int i,j;
+        int size=nums.size();
+        vector<int> ans;
+        for(i=0;i<2;i++)
+        {
+            for(j=0;j<size;j++)
+            {
+                ans.push_back(nums[j]);
+            }
+        }
+        return ans;
+    }
+};
