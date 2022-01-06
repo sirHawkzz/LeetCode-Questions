@@ -1,0 +1,26 @@
+class Solution {
+public:
+    bool isSameAfterReversals(int num) {
+        int reversed1,reversed2;
+        int remainder=0;
+        reversed1=reverse(num);
+        reversed2=reverse(reversed1);
+        if(reversed2==num)
+            return true;
+        else 
+            return false;
+        
+    }
+    int reverse(int x) {
+        double rev=0;
+        int remainder;
+        int num=x;
+        while(num!=0)
+        {
+            remainder=num%10;
+            rev= (rev * 10) + remainder;
+            num=num/10;
+        }
+        return rev;
+    }
+};
